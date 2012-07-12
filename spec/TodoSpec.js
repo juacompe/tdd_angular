@@ -14,13 +14,13 @@ describe("TodoCtrl", function() {
     it("should initially have learn angular", function() {
         var learn_angular = scope.todos[0];
         expect(learn_angular.detail).toEqual("learn angular");
-        expect(learn_angular.status).toEqual("done");
+        expect(learn_angular.status).toEqual(true);
     });
 
     it("should also initially have build angular app", function() {
         var build_angular_app= scope.todos[1];
         expect(build_angular_app.detail).toEqual("build angular app");
-        expect(build_angular_app.status).toEqual("undone");
+        expect(build_angular_app.status).toEqual(false);
     });
 
     it("can add new item", function() {
@@ -29,7 +29,7 @@ describe("TodoCtrl", function() {
         expect(scope.todos.length).toEqual(3);
         var practice_tdd = scope.todos[2];
         expect(practice_tdd.detail).toEqual(new_item);
-        expect(practice_tdd.status).toEqual("undone");
+        expect(practice_tdd.status).toEqual(false);
     });
 });
 

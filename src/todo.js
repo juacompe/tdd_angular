@@ -1,10 +1,10 @@
 function TodoCtrl($scope) {
     $scope.todos = [
-        { detail: 'learn angular', status: 'done'}, 
-        { detail: 'build angular app', status: 'undone'}];
+        { detail: 'learn angular', status: true}, 
+        { detail: 'build angular app', status: false}];
 
     $scope.addNew = function(new_item) {
-        todo = { detail: new_item, status: "undone" }
+        todo = { detail: new_item, status: false }
         $scope.todos.push(todo);
     }
 
