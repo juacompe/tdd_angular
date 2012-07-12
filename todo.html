@@ -10,6 +10,9 @@
             <ul>
                 <li ng-repeat="todo in todos">{{ todo }}</li>
             </ul>
+            <input type="text" ng-model="new_todo"
+                placeholder="new todo goes here"></input>
+            <button ng-click="addBtnClicked()">add</button>
         </div>
     </body>
 </html>
