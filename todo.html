@@ -6,9 +6,10 @@
     </head>
     <body>
         <h1>Classic Todo Application</h1>
-        <ul>
-            <li>learn angular</li>
-            <li>build angular app</li>
-        </ul>
+        <div ng-controller="TodoCtrl">
+            <ul>
+                <li ng-repeat="todo in todos">{{ todo }}</li>
+            </ul>
+        </div>
     </body>
 </html>
